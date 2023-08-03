@@ -1,0 +1,33 @@
+﻿<Application
+    x:Class="FlowTools.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:local="clr-namespace:FlowTools"
+    xmlns:s="https://github.com/canton7/Stylet">
+    <Application.Resources>
+        <s:ApplicationLoader>
+            <s:ApplicationLoader.Bootstrapper>
+                <local:Bootstrapper />
+            </s:ApplicationLoader.Bootstrapper>
+
+            <s:ApplicationLoader.MergedDictionaries>
+                <hc:ThemeResources />
+                <hc:Theme />
+                <ResourceDictionary>
+                    <!--  文字按钮  -->
+                    <Style
+                        x:Key="TextButtonStyle"
+                        BasedOn="{StaticResource ButtonDefault}"
+                        TargetType="Button">
+                        <Setter Property="Padding" Value="8,0" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="FontWeight" Value="Bold" />
+                        <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+                        <Setter Property="Background" Value="{DynamicResource ThirdlyRegionBrush}" />
+                    </Style>
+                </ResourceDictionary>
+            </s:ApplicationLoader.MergedDictionaries>
+        </s:ApplicationLoader>
+    </Application.Resources>
+</Application>
