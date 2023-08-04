@@ -101,7 +101,13 @@
 
             </Grid>
             <Border Grid.Row="1" Margin="8,4">
-                <ListBox ItemsSource="{Binding Links}" Style="{DynamicResource StackPanelHorizontalListBox}">
+                <ListBox
+                    Margin="0"
+                    Padding="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    ItemsSource="{Binding Links}"
+                    Style="{DynamicResource WrapPanelHorizontalListBox}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Button
